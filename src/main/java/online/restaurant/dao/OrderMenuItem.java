@@ -15,10 +15,10 @@ public @interface OrderMenuItem {
             String sql = "Select * from " + TABLE_NAME;
             String query="CREATE TABLE IF NOT EXISTS " + TABLE_NAME
                     + " ( id bigint NOT NULL, "
-                    + " vendor_id bigint , "
+                    + " order_id bigint , "
+                    + " quantity int4, "
                     + " menu_item_name text, "
-                    + " price decimal, "
-                    + " category text, "
+                    + " total_price numeric, "
                     + " is_veg bool , "
                     + " CONSTRAINT app_menu_item_pk PRIMARY KEY(id))";
             System.out.println("Create table query " + query);
