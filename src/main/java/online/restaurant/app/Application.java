@@ -3,6 +3,7 @@ package online.restaurant.app;
 import online.restaurant.Customer;
 import online.restaurant.Order;
 import online.restaurant.Vendor;
+import online.restaurant.dao.CustomerDAO;
 
 public class Application {
     public static void main(String[] args) {
@@ -47,6 +48,9 @@ public class Application {
         haldiram.setEmailid("haldiram2002@gmail.com");
         haldiram.setState("Maharashtra");
         haldiram.setPhonenumber(8);
+
+        CustomerDAO customerDAO=new CustomerDAO();
+        customerDAO.createTable();
 
     }
 }
