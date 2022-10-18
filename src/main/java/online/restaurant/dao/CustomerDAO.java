@@ -17,11 +17,11 @@ public class CustomerDAO {
                    + "(id bigint NOT NULL, "
                    + " name text, "
                    + " address text, "
-                   +" phonenumber bigint,"
-                   + "city text,"
-                   +"state text"
-                   +"email text"
-                   + "CONSTRAINT app_customer_pk PRIMARY KEY(id))";
+                   + " phonenumber bigint,"
+                   + " city text,"
+                   + " state text, "
+                   + " email text, "
+                   + " CONSTRAINT app_customer_pk PRIMARY KEY(id))";
            stmt.executeUpdate(query);
 
            ResultSet rs= stmt.executeQuery(sql);

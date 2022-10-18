@@ -4,6 +4,9 @@ import online.restaurant.Customer;
 import online.restaurant.Order;
 import online.restaurant.Vendor;
 import online.restaurant.dao.CustomerDAO;
+import online.restaurant.dao.MenuItemDAO;
+import online.restaurant.dao.OrderDAO;
+import online.restaurant.dao.VendorDAO;
 
 public class Application {
     public static void main(String[] args) {
@@ -51,6 +54,15 @@ public class Application {
 
         CustomerDAO customerDAO=new CustomerDAO();
         customerDAO.createTable();
+
+        VendorDAO vendorDAO=new VendorDAO();
+        vendorDAO.createTable();
+
+        OrderDAO orderDAO =new OrderDAO();
+        orderDAO.createTable();
+
+        MenuItemDAO menuItemDAO=new MenuItemDAO();
+        menuItemDAO.createTable();
 
     }
 }
